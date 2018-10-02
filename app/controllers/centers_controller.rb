@@ -1,8 +1,9 @@
 class CentersController < ApplicationController
-  
-  
-  
-  
+    def index
+        @centers = Center.all
+        puts @centers
+        render json: @centers, status: :ok
+    end   
 end
 
 
@@ -11,7 +12,6 @@ end
 #def index
 #       autor = autor.find(params [:autor_id])
 #       render json: autor.books,    status: :ok 
-end
 
 #def create
 #    book.new
